@@ -2,6 +2,8 @@ import Card from "./Card";
 import classes from './Modal.module.scss'
 const Modal = (props)=>{
     return (
+        <div>
+            <div className={classes.backdrop}></div>
     <Card className={`${classes.modal}`}>
         <footer>
             <button>Cancel</button>
@@ -32,6 +34,7 @@ const Modal = (props)=>{
         </div>
 
     </Card>
+        </div>
     )
 }
 
