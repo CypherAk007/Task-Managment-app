@@ -3,6 +3,8 @@
 @tailwind utilities;
 :root{
 --color-primary:#fff;
+--color-charcoal:#36454f;
+--color-silver:#c0c0c0;
 }
 html{
 width: 100%;

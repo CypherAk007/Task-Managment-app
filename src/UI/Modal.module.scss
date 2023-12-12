@@ -1,0 +1,12 @@
+.modal{
+    display: inline-block;
+    position: absolute;
+    margin-left: -10rem;
+    
+    & div {
+        margin-bottom: 3rem;
+    }
+    & header{
+        margin-bottom: 3rem;
+    }
+}

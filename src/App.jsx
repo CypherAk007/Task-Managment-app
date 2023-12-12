@@ -1,6 +1,7 @@
 import classes from './App.module.scss'
 import YourProjects from './YourProjects';
 import MainSection from './MainSection';
+import Modal from './UI/Modal';
 const App = ()=>{
   return (
     <div className={` flex flex-row `}>
@@ -8,8 +9,8 @@ const App = ()=>{
       <div className={`bg-black text-white flex-25 min-h-screen`}>
         <YourProjects></YourProjects>
       </div>
-      <div className={` flex-1`}><MainSection></MainSection></div>
-
+      <div className={` bg-green-800 flex-1`}><MainSection></MainSection></div>
+      
     </div>
   )
 }
