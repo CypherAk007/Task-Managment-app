@@ -3,10 +3,10 @@ import classes from './Modal.module.scss'
 const Modal = (props)=>{
     return (
         <div>
-            <div className={classes.backdrop}></div>
+            <div className={classes.backdrop} onClick={props.onCloseModal}></div>
     <Card className={`${classes.modal}`}>
         <footer>
-            <button>Cancel</button>
+            <button onClick={props.onCloseModal}>Cancel</button>
             <button>Save</button>
         </footer>
         <header>

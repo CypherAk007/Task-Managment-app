@@ -9,6 +9,10 @@ const MainSection = ()=>{
     const addProjHandler = ()=>{
         dispatch(addProjActions.toggleModal())
     }
+
+    const closeModal = ()=>{
+        dispatch(addProjActions.toggleModal())
+    }
     return(
         <div className={`  text-3xl absolute top-1/4 left-2/4 `}>
             <div className={`flex flex-col justify-center items-center `}>
@@ -19,7 +23,7 @@ const MainSection = ()=>{
             <p className={`tracking-wide flex height-8 scale-x-110 scale-y-125`}>Select a project or get started with a new one</p>
             <button className={` border-none tracking-wide mt-16 bg-black text-white p-6 rounded-xl focus:outline-none focus:border-none `} onClick={addProjHandler}>Create New Project</button>
             </div>
-            {modalToggle && <Modal title={'Title'} descriptionHeading={'Description'} emailHeading={'Email'} phoneHeading={'Phone No.'} dateHeading={'Date'}></Modal>}
+            {modalToggle && <Modal onCloseModal ={closeModal} title={'Title'} descriptionHeading={'Description'} emailHeading={'Email'} phoneHeading={'Phone No.'} dateHeading={'Date'}></Modal>}
         </div>
         
     )
