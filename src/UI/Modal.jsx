@@ -1,7 +1,8 @@
+import { createPortal } from "react-dom";
 import Card from "./Card";
 import classes from './Modal.module.scss'
 const Modal = (props)=>{
-    return (
+    return createPortal(
         <div>
             <div className={classes.backdrop} onClick={props.onCloseModal}></div>
     <Card className={`${classes.modal}`}>
@@ -34,7 +35,8 @@ const Modal = (props)=>{
         </div>
 
     </Card>
-        </div>
+        </div>,
+        document.getElementById('modal')
     )
 }
 
